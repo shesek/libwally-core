@@ -358,8 +358,8 @@ WALLY_CORE_API int bip32_key_from_parent_path_str_n_alloc(
  * :param hdkey: The parent extended key.
  * :param child_path: The path of child numbers to create.
  * :param child_path_len: The number of child numbers in ``child_path``.
- * :param bytes_out: Destination for the resulting pub tweak.
- * :param len: Length of ``bytes_out`` in bytes. Must be ``EC_PRIVATE_KEY_LEN``.
+ * :param flags: ``BIP32_FLAG_`` Flags indicating the type of derivation wanted.
+ * :param output: Destination for the resulting key.
  */
 WALLY_CORE_API int bip32_key_with_tweak_from_parent_path(
     const struct ext_key *hdkey,
