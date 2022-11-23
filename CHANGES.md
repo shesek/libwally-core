@@ -1,6 +1,12 @@
 # Changes
 
 ## Version 0.8.7
+- Javascript: Add a new WASM-based JS + typescript wrapper for Node and
+  browsers. This now supports the entire wally API and builds to an npm module.
+- Javascript: The old JS wrappers are now deprecated and will be removed
+  in the next release. Please report any issues with the replacement wrapper.
+- Python: The python wrappers are now automatically generated. Please ensure
+  you thoroughly test your Python code after upgrading.
 - psbt_extract now takes an extra flags parameter. The Java and Python
   wrappers default this to zero for backwards compatibility.
 - bip39_mnemonic_to_seed is no longer available for SWIG-wrapped languages.
