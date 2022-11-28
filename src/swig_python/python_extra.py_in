@@ -379,7 +379,7 @@ def tx_witness_stack_create(witnesses):
     return witness_stack
 
 def map_to_dict(m):
-    """ Create a wally_map from a Python dict """
+    """ Create a Python dict from a wally_map """
     ret, i, n = dict(), 0, map_get_num_items(m)
     while i < n:
         key_len = map_get_item_key_length(m, i)
@@ -392,7 +392,7 @@ def map_to_dict(m):
     return ret
 
 def map_from_dict(d):
-    """ Create a Python dict from a wally_map """
+    """ Create a wally_map from a Python dict """
     ret = map_init(len(d), None)
     for k, v in d.items():
         fn = map_add_integer if type(k) is int else map_add
